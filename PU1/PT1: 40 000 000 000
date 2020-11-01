@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void main()
+{
+printf("reizināšana: a x b ") ;
+
+long int a;
+printf("vērtība - a :");
+scanf("%ld", &a);
+printf(" a vērtība = %ld|n", a );
+
+long int b;
+printf("vērtība - b :");
+scanf("%ld", &b);
+printf(" b vērtība = %ld|n", b );
+
+long int c = a*b;
+
+printf("%ld x %ld = %ld|n",a,b,c);
+
+}
