@@ -1,0 +1,15 @@
+#include <stdio.h>
+ 
+int main()
+{
+  int c, n, f = 1;
+ 
+  printf("Ievadiet skaitli, lai aprēķinātu tā faktoriālu\n");
+  scanf("%d", &n);
+  for (c = 1; c <= n; c++)
+    f = f * c;
+ 
+  printf("Faktoriāls ir %d = %d\n", n, f);
+ 
+  return 0;
+}
