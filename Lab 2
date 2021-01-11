@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <math.h>
+
+float a, b, c, x, dx;
+int k = 0;
+float shiftedFVal(float x, float c){
+    return sinh(x)-c;
+}
+
+main ()
+{
+  printf ("Ievadi a vertibu: ");
+  scanf ("%f", &a);
+    printf ("Ievadi b vertibu: ");
+  scanf ("%f", &b);
+    printf ("Ievadi c vertibu: ");
+  scanf ("%f", &c);
+    printf ("Ievadi precizitati: ");
+  scanf ("%f", &dx);
+  
+{
+  }
+    printf("x aproksimācijas vērtība: %f\n", x);
+    printf("x reala vērtība: %f\n", sinh(c));
+    printf("iteraciju skaits: %d\n", k);
+    
+ 
+  return 0;
+}
