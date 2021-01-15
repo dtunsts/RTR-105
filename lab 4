@@ -1,1 +1,46 @@
-nav lidz galam pabeigts
+#include <stdio.h>
+#include<math.h>
+void rectIntegral(double start, double end, double iedala);
+void trapIntegral(double start, double end, double incr);
+int main()
+{
+    double x,a,b, increment;
+    int n;
+    printf("Šī programma aprēķina sin(x) integrāļa vērtību.\n");
+    printf("Lūdzu ievadiet a vērtību: ");
+    scanf(" %lf", &a);
+    printf("Lūdzu ievadiet b vērtību: ");
+    scanf(" %lf", &b);
+    printf("ievadīt precizitāti: ");
+    scanf(" %d", &n);
+    increment = (b-a)/n;
+    rectIntegral(a,b,increment);
+    trapIntegral(a,b, increment);
+    return 0;
+}
+
+void rectIntegral(double a, double b, double iedala)
+{
+    double x=a, integ = 0;
+    
+    while(x<b) 
+    { 
+        x+=iedala;
+        integ+=(x-a)*(sin(a));
+        a=x;
+    }
+       printf("izmantojot četrstūra metodi ir %lf\n", integ);
+}
+
+void trapIntegral(double start, double end, double incr)
+{
+    double x = start, integ = 0;
+    while(x<end)
+    { 
+        x += incr;
+        integ +=(sin(x)+sin(start/2))/2*(x-start);
+        start = x;
+    }
+    
+    printf("izmantojot trapeces metodi ir %lf\n", integ);
+}
